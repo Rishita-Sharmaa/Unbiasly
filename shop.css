@@ -1,0 +1,170 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Serif Text', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .icons {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.navbar .icons a:hover {
+    color: #f1c40f; /* Optional: change color on hover */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 80px auto 20px; /* Space for fixed navbar */
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: gainsboro;
+    color: black;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.product-catalogue {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.product-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: calc(33.333% - 20px); /* Three boxes per row */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.product-box img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-box h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-box p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-box .price {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.product-box button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-box button:hover {
+    background-color: #45a049;
+}
+
+.search-filter {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.search-filter input {
+    width: 200px;
+}
+
+.search-filter select {
+    width: 150px;
+}
+
+.reviews {
+    margin-top: 20px;
+}
+
+.reviews h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.reviews ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reviews li {
+    background-color: black;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

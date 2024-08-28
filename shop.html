@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Shop</title>
+    
+    <link rel="stylesheet" href="shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
+    
+    
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/originals/64/d1/f0/64d1f00ab402faac468b7920776a5837.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Edu VIC WA NT Beginner', cursive;
+            margin: 0;
+            color: black;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .icons a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .navbar .options {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-filter {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-filter input[type="text"],
+        .search-filter select {
+            margin: 0 5px;
+            padding: 5px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #000;
+        }
+
+        .search-filter input[type="text"] {
+            width: 200px;
+        }
+
+        .container {
+            margin-top: 60px; /* To offset the fixed navbar */
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .header h3 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .product-catalogue {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-box {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-box img {
+            border-radius: 10px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-box h3 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .product-box p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #f1c40f;
+        }
+
+        .product-box button {
+            background-color: #f39c12;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .product-box button:hover {
+            background-color: #e67e22;
+        }
+
+        .reviews {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .reviews h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .reviews ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reviews li {
+            font-size: 18px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="icons">
+            <a href="#wishlist" title="Wishlist">&#x2665;</a>
+            <a href="#liked-items" title="Liked Items">&#9733;</a>
+            <a href="#cart" title="Cart">&#x1F6D2;</a>
+        </div>
+        <div class="options">
+            <div class="search-filter">
+                <input type="text" placeholder="Search by crystal type...">
+                <select>
+                    <option value="">Filter by Intention</option>
+                    <option value="healing">Healing</option>
+                    <option value="protection">Protection</option>
+                </select>
+                <input type="text" placeholder="Filter by price range...">
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <h1>Discover Your Perfect Crystal</h1>
+            <h3>Embrace the Power of Natural Gems for Harmony and Wellness.</h3>
+        </div>
+
+        <div class="product-catalogue">
+            <!-- Repeat this block for each product -->
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/OIP.rvqa1QzbSvInbo-SiNkxuwHaHa?rs=1&pid=ImgDetMain" alt="Lunar Quartz">
+                <h3>Moonlit Aura Quartz</h3>
+                <p>An ethereal gem revered for its ability to amplify inner vision and stabilize emotions. Perfect for those seeking a deeper connection during meditation or enhancing their intuitive insights.</p>
+                <div class="price">Rs2299.99</div>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img src="https://th.bing.com/th/id/OIP.RixlslsqW9b-Dsd6woNzFwHaHa?rs=1&pid=ImgDetMain" alt="Sunstone">
+                <h3>Solar Flare Sunstone</h3>
+                <p>A radiant gemstone that captures the essence of the sun, enhancing self-esteem and spreading positive energy. Ideal for those looking to infuse their lives with optimism and personal strength.</p>
+                <div class="price">Rs4099.99</div>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-box">
+                <img src="https://i.pinimg.com/originals/14/32/5e/14325e805002c4e8c706004d45cb6703.jpg" alt="Celestial Amethyst">
+                <h3>Stellar Amethyst</h3>
+                <p>A revered gem known for its soothing properties, perfect for easing mental tension and encouraging peaceful sleep. Often used to support spiritual awakening and enhance personal tranquility.</p>
+                <div class="price">Rs1039.99</div>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+
+        <div class="reviews">
+            <h2>Customer Reviews</h2>
+            <ul>
+                <li>"The Solar Flare Sunstone has truly transformed my outlook. Its vibrant energy brings so much positivity into my life!" - Alex M.</li>
+                <li>"Stellar Amethyst is simply divine. It has brought me a sense of calm and clarity that I didn’t expect. Highly recommend!" - Lily A.</li>
+                <li>"Outstanding quality and the customer service was excellent. My order arrived quickly and the crystals are even more beautiful in person!" - Emma R.</li>
+                <li>"I've been using these crystals for a few weeks now, and the results are remarkable. They have made a noticeable difference in my well-being." - Michael T.</li>                
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
